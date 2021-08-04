@@ -1,4 +1,4 @@
-package ru.tieto.HomeWork.addressbook;
+package ru.tieto.HomeWork.addressbook.model;
 
 public class GroupData {
   private final String name;
