@@ -3,15 +3,15 @@ package ru.tieto.HomeWork.addressbook.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class NavigationHelperBase extends HelperBase {
+public class NavigationHelper extends HelperBase {
 
-  public NavigationHelperBase(ChromeDriver wd) {
+  public NavigationHelper(ChromeDriver wd) {
     super(wd);
   }
 
 
   public void returnToHomePage() {
-    click(By.linkText("home page"));
+    click(By.linkText("home"));
   }
 
   public void goToGroupPage() {

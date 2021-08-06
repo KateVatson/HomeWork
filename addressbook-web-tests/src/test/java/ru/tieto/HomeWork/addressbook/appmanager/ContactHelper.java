@@ -4,9 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import ru.tieto.HomeWork.addressbook.model.ContactData;
 
-public class ContactHelperBase extends HelperBase {
+public class ContactHelper extends HelperBase {
 
-  public ContactHelperBase(ChromeDriver wd) {
+  public ContactHelper(ChromeDriver wd) {
     super(wd);
   }
 
@@ -30,4 +30,11 @@ public class ContactHelperBase extends HelperBase {
     click(By.linkText("add new"));
   }
 
+  public void selectContact() {
+    click(By.xpath("//tr[@name ='entry']//input[1]"));
+  }
+
+  public void deleteSelectedContacts() {
+    click(By.xpath("//input[@value='Delete']"));
+  }
 }

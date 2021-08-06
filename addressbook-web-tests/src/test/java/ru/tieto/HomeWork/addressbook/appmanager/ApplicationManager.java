@@ -7,10 +7,10 @@ import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
   ChromeDriver wd;
-  private SessionHelperBase sessionHelper;
-  private ContactHelperBase contactHelper;
-  private GroupHelperBase groupHelper;
-  private NavigationHelperBase navigationHelper;
+  private SessionHelper sessionHelper;
+  private ContactHelper contactHelper;
+  private GroupHelper groupHelper;
+  private NavigationHelper navigationHelper;
 
   public void init() {
     ChromeOptions handlingSSL = new ChromeOptions();
@@ -18,10 +18,10 @@ public class ApplicationManager {
     wd = new ChromeDriver(handlingSSL);
     wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     wd.get("http://localhost/addressbook/");
-    navigationHelper = new NavigationHelperBase(wd);
-    groupHelper = new GroupHelperBase(wd);
-    contactHelper = new ContactHelperBase(wd);
-    sessionHelper = new SessionHelperBase(wd);
+    navigationHelper = new NavigationHelper(wd);
+    groupHelper = new GroupHelper(wd);
+    contactHelper = new ContactHelper(wd);
+    sessionHelper = new SessionHelper(wd);
     sessionHelper.login("admin", "secret");
   }
 
@@ -29,15 +29,15 @@ public class ApplicationManager {
     wd.quit();
   }
 
-  public NavigationHelperBase getNavigationHelper() {
+  public NavigationHelper getNavigationHelper() {
     return navigationHelper;
   }
 
-  public GroupHelperBase getGroupHelper() {
+  public GroupHelper getGroupHelper() {
     return groupHelper;
   }
 
-  public ContactHelperBase getContactHelper() {
+  public ContactHelper getContactHelper() {
     return contactHelper;
   }
 }

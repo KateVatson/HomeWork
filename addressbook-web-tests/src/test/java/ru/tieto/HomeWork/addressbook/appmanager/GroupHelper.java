@@ -4,9 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import ru.tieto.HomeWork.addressbook.model.GroupData;
 
-public class GroupHelperBase extends HelperBase {
+public class GroupHelper extends HelperBase {
 
-  public GroupHelperBase(ChromeDriver wd) {
+  public GroupHelper(ChromeDriver wd) {
     super(wd);
   }
 

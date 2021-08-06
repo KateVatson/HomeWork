@@ -3,9 +3,9 @@ package ru.tieto.HomeWork.addressbook.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class SessionHelperBase extends HelperBase {
+public class SessionHelper extends HelperBase {
 
-  public SessionHelperBase(ChromeDriver wd) {
+  public SessionHelper(ChromeDriver wd) {
     super(wd);
   }
   public void login(String username, String password) {
