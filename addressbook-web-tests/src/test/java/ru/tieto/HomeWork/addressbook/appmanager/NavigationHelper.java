@@ -11,10 +11,14 @@ public class NavigationHelper extends HelperBase {
 
 
   public void returnToHomePage() {
-    click(By.linkText("home"));
+    click(By.linkText("home page"));
   }
 
   public void goToGroupPage() {
     click(By.linkText("groups"));
+  }
+
+  public void returnToHome() {
+    click(By.linkText("home"));
   }
 }
