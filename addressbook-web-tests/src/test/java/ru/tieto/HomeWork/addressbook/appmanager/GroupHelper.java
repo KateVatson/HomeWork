@@ -1,12 +1,13 @@
 package ru.tieto.HomeWork.addressbook.appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import ru.tieto.HomeWork.addressbook.model.GroupData;
 
 public class GroupHelper extends HelperBase {
 
-  public GroupHelper(ChromeDriver wd) {
+  public GroupHelper(WebDriver wd) {
     super(wd);
   }
 
