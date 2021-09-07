@@ -2,7 +2,11 @@ package ru.tieto.HomeWork.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import ru.tieto.HomeWork.addressbook.model.ContactData;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ContactHelper extends HelperBase {
 
@@ -30,16 +34,17 @@ public class ContactHelper extends HelperBase {
     click(By.linkText("add new"));
   }
 
-  public void selectContact() {
-    click(By.xpath("//tr[@name ='entry']//input[1]"));
+  public void selectContact(int index) {
+    wd.findElements(By.xpath("//tr[@name ='entry']//input[1]")).get(index).click();
   }
 
   public void deleteSelectedContacts() {
     click(By.xpath("//input[@value='Delete']"));
   }
 
-  public void editContact() {
-    click(By.xpath("//img[@alt='Edit']"));
+  public void editContact(int index) {
+    wd.findElements(By.xpath("//img[@alt='Edit']")).get(index).click();
+
   }
 
   public void submitContactModification() {
@@ -60,6 +65,21 @@ public class ContactHelper extends HelperBase {
     fillContactForm(contact);
     submitContactCreation();
     returnToHomePage();
+  }
+
+
+  public List<ContactData> getContactList() {
+    List<ContactData> contacts = new ArrayList<ContactData>();
+    List<WebElement> elements = wd.findElements(By.cssSelector("tr[name='entry']"));
+    for (WebElement element : elements) {
+      List<WebElement> cells = element.findElements(By.tagName("td"));
+      String firstName = cells.get(2).getText();
+      String lastname = cells.get(1).getText();
+      int id = Integer.parseInt(cells.get(0).findElement(By.tagName("input")).getAttribute("id"));
+      ContactData contact = new ContactData(id, firstName,null,lastname, null, null, null,null,null,null);
+      contacts.add(contact);
+    }
+    return contacts;
   }
 }
 

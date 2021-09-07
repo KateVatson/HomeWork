@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import ru.tieto.HomeWork.addressbook.model.ContactData;
 import ru.tieto.HomeWork.addressbook.model.GroupData;
 
 import java.util.ArrayList;
