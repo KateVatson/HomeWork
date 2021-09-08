@@ -46,6 +46,10 @@ public class GroupHelper extends HelperBase {
     click(By.name("edit"));
   }
 
+  public boolean isThereAGroup() {
+    return isElementPresent(By.name("selected[]"));
+  }
+
   public void submitGroupModification() {
     click(By.name("update"));
   }
@@ -75,14 +79,11 @@ public class GroupHelper extends HelperBase {
     returnToGroupPage();
   }
 
-  public boolean isThereAGroup() {
-    return isElementPresent(By.name("selected[]"));
-  }
 
   public Groups all() {
     Groups groups = new Groups();
     List<WebElement> elements = wd.findElements(By.cssSelector("span.group"));
-    for (WebElement element : elements){
+    for (WebElement element : elements) {
       String name = element.getText();
       int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
       groups.add(new GroupData().withId(id).withName(name));

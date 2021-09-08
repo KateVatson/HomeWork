@@ -6,8 +6,6 @@ import org.testng.annotations.Test;
 import ru.tieto.HomeWork.addressbook.model.GroupData;
 import ru.tieto.HomeWork.addressbook.model.Groups;
 
-import java.util.List;
-
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
