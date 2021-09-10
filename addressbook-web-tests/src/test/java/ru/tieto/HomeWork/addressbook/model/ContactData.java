@@ -4,16 +4,57 @@ import java.util.Objects;
 
 public class ContactData {
   private int id = Integer.MAX_VALUE;
-  private  String firstname;
-  private  String middlename;
-  private  String lastname;
-  private  String nickname;
-  private  String title;
-  private  String company;
-  private  String address;
-  private  String mobile;
-  private  String email;
+  private String firstname;
+  private String middlename;
+  private String lastname;
+  private String nickname;
+  private String title;
+  private String company;
+  private String address;
+  private String email;
+  private String mobilePhone;
+  private String workPhone;
+  private String homePhone;
+  private String allPhones;
+  private String allEmails;
+  private String email2;
+  private String email3;
 
+  public String getAllEmails() {
+    return allEmails;
+  }
+
+  public ContactData withAllEmails(String allEmails) {
+    this.allEmails = allEmails;
+    return this;
+  }
+
+  public String getEmail2() {
+    return email2;
+  }
+
+  public ContactData withEmail2(String email2) {
+    this.email2 = email2;
+    return this;
+  }
+
+  public String getEmail3() {
+    return email3;
+  }
+
+  public ContactData withEmail3(String email3) {
+    this.email3 = email3;
+    return this;
+  }
+
+  public String getAllPhones() {
+    return allPhones;
+  }
+
+  public ContactData withAllPhones(String allPhones) {
+    this.allPhones = allPhones;
+    return this;
+  }
 
   public int getId() {
     return id;
@@ -47,12 +88,28 @@ public class ContactData {
     return address;
   }
 
-  public String getMobile() {
-    return mobile;
+  public String getMobilePhone() {
+    return mobilePhone;
   }
 
   public String getEmail() {
     return email;
+  }
+  public String getWorkPhone() {
+    return workPhone;
+  }
+  public String getHomePhone() {
+    return homePhone;
+  }
+
+  public ContactData withWorkPhone(String workPhone) {
+    this.workPhone = workPhone;
+    return this;
+  }
+
+  public ContactData withHomePhone(String homePhone) {
+    this.homePhone = homePhone;
+    return this;
   }
 
   public ContactData withId(int id) {
@@ -95,8 +152,8 @@ public class ContactData {
     return this;
   }
 
-  public ContactData withMobile(String mobile) {
-    this.mobile = mobile;
+  public ContactData withMobilePhone(String mobilePhone) {
+    this.mobilePhone = mobilePhone;
     return this;
   }
 
