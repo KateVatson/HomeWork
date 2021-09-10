@@ -11,7 +11,8 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 
-public class ContactPhoneTests extends  TestBase{
+public class ContactInformationTests extends  TestBase{
+
   @BeforeMethod
   public void ensurePreconditions() {
     if (app.contact().all().size() == 0) {
@@ -52,7 +53,7 @@ public class ContactPhoneTests extends  TestBase{
   private String mergePhones(ContactData phone) {
     return Arrays.asList(phone.getHomePhone(), phone.getMobilePhone(), phone.getWorkPhone())
             .stream().filter((s) -> !s.equals(""))
-            .map(ContactPhoneTests::cleaned).
+            .map(ContactInformationTests::cleaned).
             collect(Collectors.joining("\n"));
 
   }
