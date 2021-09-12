@@ -1,0 +1,102 @@
+<list>
+  <contact>
+    <firstname>Pokemon 0</firstname>
+    <lastname>Pikachu 0</lastname>
+    <address>Saint-Petersburg
+ 0</address>
+    <email>test_0_@mir.ru</email>
+    <mobilePhone>+7(999)55_0</mobilePhone>
+    <workPhone>223 22_0</workPhone>
+    <email2>dont_sleep_0_@war.com</email2>
+  </contact>
+  <contact>
+    <firstname>Pokemon 1</firstname>
+    <lastname>Pikachu 1</lastname>
+    <address>Saint-Petersburg
+ 1</address>
+    <email>tepst_1_@mir.ru</email>
+      <mobilePhone>+7(999)55_1</mobilePhone>
+      <workPhone>223 22_1</workPhone>
+      <email2>dont_slee_1_@war.com</email2>
+  </contact>
+  <contact>
+    <firstname>Pokemon 2</firstname>
+    <lastname>Pikachu 2</lastname>
+    <address>Saint-Petersburg
+ 2</address>
+    <email>test_2_@mir.ru</email>
+    <mobilePhone>+7(999)55_2</mobilePhone>
+    <workPhone>223 22_2</workPhone>
+    <email2>dont_sleep_2_@war.com</email2>
+  </contact>
+  <contact>
+    <firstname>Pokemon 3</firstname>
+    <lastname>Pikachu 3</lastname>
+    <address>Saint-Petersburg
+ 3</address>
+    <email>test_3_@mir.ru</email>
+    <mobilePhone>+7(999)55_3</mobilePhone>
+    <workPhone>223 22_3</workPhone>
+    <email2>dont_sleep_3_@war.com</email2>
+  </contact>
+  <contact>
+    <firstname>Pokemon 4</firstname>
+    <lastname>Pikachu 4</lastname>
+    <address>Saint-Petersburg
+ 4</address>
+    <email>test_4_@mir.ru</email>
+    <mobilePhone>+7(999)55_4</mobilePhone>
+    <workPhone>223 22_4</workPhone>
+    <email2>dont_sleep_4_@war.com</email2>
+  </contact>
+  <contact>
+    <firstname>Pokemon 5</firstname>
+    <lastname>Pikachu 5</lastname>
+    <address>Saint-Petersburg
+ 5</address>
+    <email>test_5_@mir.ru</email>
+    <mobilePhone>+7(999)55_5</mobilePhone>
+    <workPhone>223 22_5</workPhone>
+    <email2>dont_sleep_5_@war.com</email2>
+  </contact>
+  <contact>
+    <firstname>Pokemon 6</firstname>
+    <lastname>Pikachu 6</lastname>
+    <address>Saint-Petersburg
+ 6</address>
+    <email>test_6_@mir.ru</email>
+    <mobilePhone>+7(999)55_6</mobilePhone>
+    <workPhone>223 22_6</workPhone>
+    <email2>dont_sleep_6_@war.com</email2>
+  </contact>
+  <contact>
+    <firstname>Pokemon 7</firstname>
+    <lastname>Pikachu 7</lastname>
+    <address>Saint-Petersburg
+ 7</address>
+    <email>test_7_@mir.ru</email>
+    <mobilePhone>+7(999)55_7</mobilePhone>
+    <workPhone>223 22_7</workPhone>
+    <email2>dont_sleep_7_@war.com</email2>
+  </contact>
+  <contact>
+    <firstname>Pokemon 8</firstname>
+    <lastname>Pikachu 8</lastname>
+    <address>Saint-Petersburg
+ 8</address>
+    <email>test_8_@mir.ru</email>
+    <mobilePhone>+7(999)55_8</mobilePhone>
+    <workPhone>223 22_8</workPhone>
+    <email2>dont_sleep_8_@war.com</email2>
+  </contact>
+  <contact>
+    <firstname>Pokemon 9</firstname>
+    <lastname>Pikachu 9</lastname>
+    <address>Saint-Petersburg
+ 9</address>
+    <email>test_9_@mir.ru</email>
+    <mobilePhone>+7(999)55_9</mobilePhone>
+    <workPhone>223 22_9</workPhone>
+    <email2>dont_sleep_9_@war.com</email2>
+  </contact>
+</list>
