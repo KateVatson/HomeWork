@@ -5,19 +5,21 @@
     <address>Saint-Petersburg
  0</address>
     <email>test_0_@mir.ru</email>
-    <mobilePhone>+7(999)55_0</mobilePhone>
-    <workPhone>223 22_0</workPhone>
+    <mobilePhone>+7(999)55 0</mobilePhone>
+    <workPhone>223 22 0</workPhone>
     <email2>dont_sleep_0_@war.com</email2>
+    <photo>src\test\java\ru\tieto\HomeWork\addressbook\resources\test.png</photo>
   </contact>
   <contact>
     <firstname>Pokemon 1</firstname>
     <lastname>Pikachu 1</lastname>
     <address>Saint-Petersburg
  1</address>
-    <email>tepst_1_@mir.ru</email>
-      <mobilePhone>+7(999)55_1</mobilePhone>
-      <workPhone>223 22_1</workPhone>
-      <email2>dont_slee_1_@war.com</email2>
+    <email>test_1_@mir.ru</email>
+    <mobilePhone>+7(999)55 1</mobilePhone>
+    <workPhone>223 22 1</workPhone>
+    <email2>dont_sleep_1_@war.com</email2>
+    <photo>src\test\java\ru\tieto\HomeWork\addressbook\resources\test.png</photo>
   </contact>
   <contact>
     <firstname>Pokemon 2</firstname>
@@ -25,9 +27,10 @@
     <address>Saint-Petersburg
  2</address>
     <email>test_2_@mir.ru</email>
-    <mobilePhone>+7(999)55_2</mobilePhone>
-    <workPhone>223 22_2</workPhone>
+    <mobilePhone>+7(999)55 2</mobilePhone>
+    <workPhone>223 22 2</workPhone>
     <email2>dont_sleep_2_@war.com</email2>
+    <photo>src\test\java\ru\tieto\HomeWork\addressbook\resources\test.png</photo>
   </contact>
   <contact>
     <firstname>Pokemon 3</firstname>
@@ -35,9 +38,10 @@
     <address>Saint-Petersburg
  3</address>
     <email>test_3_@mir.ru</email>
-    <mobilePhone>+7(999)55_3</mobilePhone>
-    <workPhone>223 22_3</workPhone>
+    <mobilePhone>+7(999)55 3</mobilePhone>
+    <workPhone>223 22 3</workPhone>
     <email2>dont_sleep_3_@war.com</email2>
+    <photo>src\test\java\ru\tieto\HomeWork\addressbook\resources\test.png</photo>
   </contact>
   <contact>
     <firstname>Pokemon 4</firstname>
@@ -45,9 +49,10 @@
     <address>Saint-Petersburg
  4</address>
     <email>test_4_@mir.ru</email>
-    <mobilePhone>+7(999)55_4</mobilePhone>
-    <workPhone>223 22_4</workPhone>
+    <mobilePhone>+7(999)55 4</mobilePhone>
+    <workPhone>223 22 4</workPhone>
     <email2>dont_sleep_4_@war.com</email2>
+    <photo>src\test\java\ru\tieto\HomeWork\addressbook\resources\test.png</photo>
   </contact>
   <contact>
     <firstname>Pokemon 5</firstname>
@@ -55,9 +60,10 @@
     <address>Saint-Petersburg
  5</address>
     <email>test_5_@mir.ru</email>
-    <mobilePhone>+7(999)55_5</mobilePhone>
-    <workPhone>223 22_5</workPhone>
+    <mobilePhone>+7(999)55 5</mobilePhone>
+    <workPhone>223 22 5</workPhone>
     <email2>dont_sleep_5_@war.com</email2>
+    <photo>src\test\java\ru\tieto\HomeWork\addressbook\resources\test.png</photo>
   </contact>
   <contact>
     <firstname>Pokemon 6</firstname>
@@ -65,9 +71,10 @@
     <address>Saint-Petersburg
  6</address>
     <email>test_6_@mir.ru</email>
-    <mobilePhone>+7(999)55_6</mobilePhone>
-    <workPhone>223 22_6</workPhone>
+    <mobilePhone>+7(999)55 6</mobilePhone>
+    <workPhone>223 22 6</workPhone>
     <email2>dont_sleep_6_@war.com</email2>
+    <photo>src\test\java\ru\tieto\HomeWork\addressbook\resources\test.png</photo>
   </contact>
   <contact>
     <firstname>Pokemon 7</firstname>
@@ -75,9 +82,10 @@
     <address>Saint-Petersburg
  7</address>
     <email>test_7_@mir.ru</email>
-    <mobilePhone>+7(999)55_7</mobilePhone>
-    <workPhone>223 22_7</workPhone>
+    <mobilePhone>+7(999)55 7</mobilePhone>
+    <workPhone>223 22 7</workPhone>
     <email2>dont_sleep_7_@war.com</email2>
+    <photo>src\test\java\ru\tieto\HomeWork\addressbook\resources\test.png</photo>
   </contact>
   <contact>
     <firstname>Pokemon 8</firstname>
@@ -85,9 +93,10 @@
     <address>Saint-Petersburg
  8</address>
     <email>test_8_@mir.ru</email>
-    <mobilePhone>+7(999)55_8</mobilePhone>
-    <workPhone>223 22_8</workPhone>
+    <mobilePhone>+7(999)55 8</mobilePhone>
+    <workPhone>223 22 8</workPhone>
     <email2>dont_sleep_8_@war.com</email2>
+    <photo>src\test\java\ru\tieto\HomeWork\addressbook\resources\test.png</photo>
   </contact>
   <contact>
     <firstname>Pokemon 9</firstname>
@@ -95,8 +104,9 @@
     <address>Saint-Petersburg
  9</address>
     <email>test_9_@mir.ru</email>
-    <mobilePhone>+7(999)55_9</mobilePhone>
-    <workPhone>223 22_9</workPhone>
+    <mobilePhone>+7(999)55 9</mobilePhone>
+    <workPhone>223 22 9</workPhone>
     <email2>dont_sleep_9_@war.com</email2>
+    <photo>src\test\java\ru\tieto\HomeWork\addressbook\resources\test.png</photo>
   </contact>
 </list>

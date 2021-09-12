@@ -4,6 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
+
 import java.io.File;
 import java.util.Objects;
 
@@ -33,6 +34,8 @@ public class ContactData {
   @Expose
   private String email2;
   private String email3;
+  @Expose
+  private File photo;
 
   public  File getPhoto() {
     return photo;
@@ -43,7 +46,6 @@ public class ContactData {
     return this;
   }
 
-  private File photo;
 
   public String getAllEmails() {
     return allEmails;

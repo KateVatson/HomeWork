@@ -1,26 +1,46 @@
 package ru.tieto.HomeWork.addressbook.tests;
 
+import com.thoughtworks.xstream.XStream;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import ru.tieto.HomeWork.addressbook.model.ContactData;
 import ru.tieto.HomeWork.addressbook.model.Contacts;
+import ru.tieto.HomeWork.addressbook.model.GroupData;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ContactCreationTests extends TestBase{
+  @DataProvider
+  public Iterator<Object[]> validContactsFromXml() throws IOException {
+    BufferedReader reader = new BufferedReader(new FileReader("src\\test\\java\\ru\\tieto\\HomeWork\\addressbook\\resources\\contacts.xml"));
+    String xml = "";
+    String line = reader.readLine();
+    while (line != null) {
+      xml += line;
+      line = reader.readLine();
+    }
+    XStream xstream = new XStream();
+    xstream.processAnnotations(ContactData.class);
+    List<ContactData> groups = (List<ContactData>) xstream.fromXML(xml);
+    return groups.stream().map((c) -> new Object[] {c}).collect(Collectors.toList()).iterator();
+  }
 
-  @Test
-  public void testContactCreationTests() {
+  @Test (dataProvider = "validContactsFromXml")
+  public void testContactCreationTests(ContactData contact) {
     Contacts before = app.contact().all();
-    File photo = new File("src\\test\\java\\ru\\tieto\\HomeWork\\addressbook\\resources\\test.png");
-    ContactData contact = new ContactData().withFirstname("Ivan").withLastname("Ivanov").withEmail("test@hh.ok").withPhoto(photo);
     app.contact().create(contact);
     Contacts after = app.contact().all();
     Assert.assertEquals(after.size(), before.size() + 1);
-
 
     assertThat(after, equalTo(
             before.withAdded(contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
