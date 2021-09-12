@@ -21,37 +21,4 @@
     <email2>dont_sleep_1_@war.com</email2>
     <photo>src\test\java\ru\tieto\HomeWork\addressbook\resources\test.png</photo>
   </contact>
-  <contact>
-    <firstname>Pokemon 2</firstname>
-    <lastname>Pikachu 2</lastname>
-    <address>Saint-Petersburg
- 2</address>
-    <email>test_2_@mir.ru</email>
-    <mobilePhone>+7(999)55 2</mobilePhone>
-    <workPhone>223 22 2</workPhone>
-    <email2>dont_sleep_2_@war.com</email2>
-    <photo>src\test\java\ru\tieto\HomeWork\addressbook\resources\test.png</photo>
-  </contact>
-  <contact>
-    <firstname>Pokemon 3</firstname>
-    <lastname>Pikachu 3</lastname>
-    <address>Saint-Petersburg
- 3</address>
-    <email>test_3_@mir.ru</email>
-    <mobilePhone>+7(999)55 3</mobilePhone>
-    <workPhone>223 22 3</workPhone>
-    <email2>dont_sleep_3_@war.com</email2>
-    <photo>src\test\java\ru\tieto\HomeWork\addressbook\resources\test.png</photo>
-  </contact>
-  <contact>
-    <firstname>Pokemon 4</firstname>
-    <lastname>Pikachu 4</lastname>
-    <address>Saint-Petersburg
- 4</address>
-    <email>test_4_@mir.ru</email>
-    <mobilePhone>+7(999)55 4</mobilePhone>
-    <workPhone>223 22 4</workPhone>
-    <email2>dont_sleep_4_@war.com</email2>
-    <photo>src\test\java\ru\tieto\HomeWork\addressbook\resources\test.png</photo>
-  </contact>
 </list>
