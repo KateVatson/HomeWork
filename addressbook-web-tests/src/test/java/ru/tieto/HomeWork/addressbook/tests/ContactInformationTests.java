@@ -36,13 +36,13 @@ public class ContactInformationTests extends  TestBase{
 
   }
 
+
+
   private String mergeAddress(ContactData address) {
     return Arrays.asList(address.getAddress())
             .stream().filter((s) -> !s.equals(""))
             .collect(Collectors.joining("\n"));
       }
-
-
 
   private String mergeEmails(ContactData email) {
     return Arrays.asList(email.getEmail(), email.getEmail2(), email.getEmail3())
