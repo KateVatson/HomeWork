@@ -1,6 +1,5 @@
 package ru.tieto.HomeWork.addressbook.tests;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.tieto.HomeWork.addressbook.model.GroupData;
