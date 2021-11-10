@@ -8,7 +8,7 @@
     <mobilePhone>+7(999)55 0</mobilePhone>
     <workPhone>223 22 0</workPhone>
     <email2>dont_sleep_0_@war.com</email2>
-    <photo>src\test\java\ru\tieto\HomeWork\addressbook\resources\test.png</photo>
+    <photo>src\test\resources\test.png</photo>
   </contact>
   <contact>
     <firstname>Pokemon 1</firstname>
@@ -19,6 +19,6 @@
     <mobilePhone>+7(999)55 1</mobilePhone>
     <workPhone>223 22 1</workPhone>
     <email2>dont_sleep_1_@war.com</email2>
-    <photo>src\test\java\ru\tieto\HomeWork\addressbook\resources\test.png</photo>
+    <photo>src\test\resources\test.png</photo>
   </contact>
 </list>

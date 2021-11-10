@@ -2,8 +2,11 @@ package ru.tieto.HomeWork.addressbook.model;
 
 import com.google.common.collect.ForwardingSet;
 
+import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class Groups extends ForwardingSet<GroupData> {
   private Set<GroupData> delegate;
@@ -14,6 +17,10 @@ public class Groups extends ForwardingSet<GroupData> {
 
   public Groups() {
     this.delegate = new HashSet<>();
+  }
+
+  public Groups(Collection<GroupData> groups) {
+    this.delegate = new HashSet<GroupData>(groups);
   }
 
   @Override

@@ -84,7 +84,7 @@ public class ContactDataGenerator {
     for (int i = 0; i < count; i++) {
       contacts.add(new ContactData().withFirstname(String.format("Pokemon %s", i))
               .withLastname(String.format("Pikachu %s", i)).withAddress(String.format("Saint-Petersburg\n %s", i)).withMobilePhone(String.format("+7(999)55 %s", i))
-             .withWorkPhone(String.format("223 22 %s", i)).withEmail(String.format("test_%s_@mir.ru", i)).withEmail2(String.format("dont_sleep_%s_@war.com", i)).withPhoto(new File ("src\\test\\java\\ru\\tieto\\HomeWork\\addressbook\\resources/test.png")));
+             .withWorkPhone(String.format("223 22 %s", i)).withEmail(String.format("test_%s_@mir.ru", i)).withEmail2(String.format("dont_sleep_%s_@war.com", i)).withPhoto(new File ("src\\test\\resources/test.png")));
     }
     return contacts;
   }
