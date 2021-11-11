@@ -55,11 +55,11 @@ public class ContactCreationTests extends TestBase{
   // Реализован xml
   @Test (dataProvider = "validContactsFromXml")
   public void testContactCreationTests(ContactData contact) {
-    Contacts before = app.contact().all();
+    Contacts before = app.db().contacts();
     app.contact().create(contact);
-    Contacts after = app.contact().all();
-    Assert.assertEquals(after.size(), before.size() + 1);
+    assertThat(app.contact().count(), equalTo(before.size() + 1));
 
+    Contacts after = app.db().contacts();
     assertThat(after, equalTo(
             before.withAdded(contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
   }

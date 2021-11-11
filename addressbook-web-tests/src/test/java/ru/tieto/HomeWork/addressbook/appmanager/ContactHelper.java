@@ -28,7 +28,12 @@ public class ContactHelper extends HelperBase {
     type(By.name("address"), contactData.getAddress());
     type(By.name("mobile"), contactData.getMobilePhone());
     type(By.name("email"), contactData.getEmail());
+    type(By.name("email2"), contactData.getEmail2());
     attach(By.name("photo"), contactData.getPhoto());
+  }
+
+  public int count() {
+    return wd.findElements(By.name("selected[]")).size();
   }
 
   public void initCreation() {
