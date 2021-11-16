@@ -15,6 +15,9 @@ dependencies {
     implementation 'mysql:mysql-connector-java:8.0.26'
     implementation 'org.hibernate:hibernate-core:5.5.6.Final'
 }
+test {
+    useTestNG()
+}
 
 task testContacts(type: Test) {
     useTestNG {
@@ -25,6 +28,9 @@ task testContacts(type: Test) {
     }
     if (project.hasProperty('target')) {
         systemProperty 'target', "${target}"
+    }
+    if (project.hasProperty('verifyUI')) {
+        systemProperty 'verifyUI', "${verifyUI}"
     }
 }
 
@@ -38,7 +44,7 @@ task testGroups(type:  Test) {
     if (project.hasProperty('target')) {
         systemProperty 'target', "${target}"
     }
-}
-test {
-    useTestNG()
+    if (project.hasProperty('verifyUI')) {
+        systemProperty 'verifyUI', "${verifyUI}"
+    }
 }
