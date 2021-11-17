@@ -1,6 +1,5 @@
 package ru.tieto.HomeWork.addressbook.tests;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.tieto.HomeWork.addressbook.model.ContactData;
@@ -24,7 +23,7 @@ public class ContactDeletionTests extends TestBase {
     Contacts before = app.db().contacts();
     ContactData deletedContact = before.iterator().next();
     app.contact().delete(deletedContact);
-    app.goTo().GoToHome();
+    app.goTo().goToHome();
     assertThat(app.group().count(), equalTo(before.size() - 1));
 
     Contacts after = app.db().contacts();

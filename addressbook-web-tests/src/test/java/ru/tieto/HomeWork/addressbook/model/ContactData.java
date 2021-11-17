@@ -245,7 +245,12 @@ public class ContactData {
     this.email = email;
     return this;
   }
+  public ContactData inGroup(GroupData group) {
+    groups.add(group);
+    return this;
 
+
+  }
   @Override
   public String toString() {
     return "ContactData{" +

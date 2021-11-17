@@ -1,12 +1,16 @@
 package ru.tieto.HomeWork.addressbook.appmanager;
 
+import org.hibernate.sql.Select;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import ru.tieto.HomeWork.addressbook.model.ContactData;
 import ru.tieto.HomeWork.addressbook.model.Contacts;
+import ru.tieto.HomeWork.addressbook.model.GroupData;
 
 import java.util.List;
+
 
 public class ContactHelper extends HelperBase {
 
@@ -18,7 +22,7 @@ public class ContactHelper extends HelperBase {
     click(By.xpath("//div[@id='content']/form/input[21]"));
   }
 
-  public void fillContactForm(ContactData contactData) {
+  public void fillContactForm(ContactData contactData, boolean creation) {
     type(By.name("firstname"), contactData.getFirstname());
     type(By.name("middlename"), contactData.getMiddlename());
     type(By.name("lastname"), contactData.getLastname());
@@ -30,7 +34,18 @@ public class ContactHelper extends HelperBase {
     type(By.name("email"), contactData.getEmail());
     type(By.name("email2"), contactData.getEmail2());
     attach(By.name("photo"), contactData.getPhoto());
+
+    if (creation) {
+      if (contactData.getGroups().size() > 0) {
+        Assert.assertTrue(contactData.getGroups().size() == 1);
+        wd.findElement(By.name("new_group"))
+                .findElement(By.xpath("//option[@value=" + contactData.getGroups().iterator().next().getId() + "]")).click();
+      }
+    } else {
+      Assert.assertFalse(isElementPresent(By.name("new_group")));
+    }
   }
+
 
   public int count() {
     return wd.findElements(By.name("selected[]")).size();
@@ -71,7 +86,7 @@ public class ContactHelper extends HelperBase {
 
   public void create(ContactData contact) {
     initCreation();
-    fillContactForm(contact);
+    fillContactForm(contact, true);
     submitContactCreation();
     contactCache = null;
     returnToHomePage();
@@ -86,7 +101,7 @@ public class ContactHelper extends HelperBase {
 
   public void modify(ContactData contact) {
     editContactById(contact.getId());
-    fillContactForm(contact);
+    fillContactForm(contact, false);
     submitModification();
     contactCache = null;
   }
@@ -134,5 +149,44 @@ public class ContactHelper extends HelperBase {
     return new ContactData().withId(contact.getId()).withFirstname(firstname).withLastname(lastname)
             .withHomePhone(home).withMobilePhone(mobile).withWorkPhone(work).withEmail(email).withEmail2(email2).withEmail3(email3).withAddress(address);
   }
+
+  public void addContactToGroup(ContactData contact, GroupData group) {
+    selectContactById(contact.getId());
+    selectGroupByIdForAdd(group);
+    addToGroup();
+    goToGroup();
+
+  }
+
+  private void selectGroupByIdForAdd(GroupData group) {
+    wd.findElement(By.xpath("//select[@name='to_group']//option[@value=" + group.getId() + "]")).click();
+  }
+
+  private void goToGroup() {
+    click(By.partialLinkText("group page"));
+  }
+
+  private void addToGroup() {
+    click(By.name("add"));
+  }
+
+  public void selectGroupForRemove(GroupData group) {
+    wd.findElement(By.name("group")).findElement(By.xpath("//option[@value=" + group.getId() + "]")).click();
+  }
+
+  public void removeContactFromGroup(ContactData contact) {
+    selectContactById(contact.getId());
+    removeContact();
+    goToGroup();
+    contactCache = null;
+  }
+
+  private void removeContact() {
+    click(By.name("remove"));
+  }
 }
+
+
+
+
 
