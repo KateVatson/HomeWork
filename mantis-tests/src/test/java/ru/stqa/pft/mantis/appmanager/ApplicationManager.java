@@ -18,7 +18,7 @@ public class ApplicationManager {
   private String browser;
 
 
-  public ApplicationManager(String browser){
+  public ApplicationManager(String browser) {
     this.browser = browser;
     properties = new Properties();
 
@@ -30,7 +30,7 @@ public class ApplicationManager {
 
     if (browser.equals(BrowserType.CHROME)) {
       wd = new ChromeDriver();
-    } else if (browser.equals(BrowserType.FIREFOX)){
+    } else if (browser.equals(BrowserType.FIREFOX)) {
       wd = new FirefoxDriver();
     } else if (browser.equals(BrowserType.IE)) {
       wd = new InternetExplorerDriver();
@@ -41,11 +41,16 @@ public class ApplicationManager {
 
   }
 
-
-
   public void stop() {
     wd.quit();
   }
 
-   }
+  public HttpSession newSession() {
+    return new HttpSession(this);
+  }
+
+  public String getProperty(String key) {
+    return properties.getProperty(key);
+  }
+}
 
