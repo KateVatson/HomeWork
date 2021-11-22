@@ -10,7 +10,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-import java.util.regex.MatchResult;
 
 public class ApplicationManager {
   private final Properties properties;
@@ -20,6 +19,7 @@ public class ApplicationManager {
   private RegistrationHelper registrationHelper;
   private FtpHelper ftp;
   private MailHelper mailHelper;
+  private DbHelper dbHelper;
 
 
   public ApplicationManager(String browser) {
@@ -31,6 +31,8 @@ public class ApplicationManager {
   public void init() throws IOException {
     String target = System.getProperty("target", "local");
     properties.load(new FileReader(String.format("src\\test\\resources\\%s.properties", target)));
+
+    dbHelper = new DbHelper();
   }
 
   public void stop() {
@@ -72,7 +74,7 @@ public class ApplicationManager {
       } else if (browser.equals(BrowserType.IE)) {
         wd = new InternetExplorerDriver();
       }
-      wd.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+      wd.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
       wd.get(properties.getProperty("web.baseUrl"));
     }
     return wd;
@@ -85,5 +87,10 @@ public class ApplicationManager {
     return mailHelper;
   }
 
+
+  public DbHelper db() {
+    return dbHelper;
+  }
 }
+
 
