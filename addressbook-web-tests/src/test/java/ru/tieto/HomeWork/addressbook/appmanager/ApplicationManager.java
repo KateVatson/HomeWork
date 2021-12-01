@@ -49,16 +49,13 @@ public class ApplicationManager {
       wd = new RemoteWebDriver(new URL(properties.getProperty("selenium.server")), capabilities);
     }
     wd.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-    System.out.println("server:");
-    System.out.println(properties.getProperty("selenium.server"));
-    System.out.println("url:");
-    System.out.println(properties.getProperty("web.baseUrl"));
     wd.get(properties.getProperty("web.baseUrl"));
     navigationHelper = new NavigationHelper(wd);
     groupHelper = new GroupHelper(wd);
     contactHelper = new ContactHelper(wd);
     sessionHelper = new SessionHelper(wd);
     sessionHelper.login(properties.getProperty("web.adminLogin"), properties.getProperty("web.adminPassword"));
+    throw new AssertionError(properties.getProperty("web.baseUrl"));
   }
 
   public DbHelper db() {
