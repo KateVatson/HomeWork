@@ -2,7 +2,6 @@ package ru.tieto.HomeWork.addressbook.appmanager;
 
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -50,11 +49,8 @@ public class ApplicationManager {
       wd = new RemoteWebDriver(new URL(properties.getProperty("selenium.server")), capabilities);
     }
     wd.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-    try {
-      wd.get(properties.getProperty("web.baseUrl"));
-    } catch(WebDriverException e) {
-      throw new AssertionError(properties.getProperty("web.baseUrl"));
-    }
+    wd.get(properties.getProperty("web.baseUrl"));
+    wd.get("http://192.168.0.26/addressbook/");
     navigationHelper = new NavigationHelper(wd);
     groupHelper = new GroupHelper(wd);
     contactHelper = new ContactHelper(wd);
