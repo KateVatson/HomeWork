@@ -49,7 +49,7 @@ public class ApplicationManager {
       wd = new RemoteWebDriver(new URL(properties.getProperty("selenium.server")), capabilities);
     }
     wd.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-    wd.get(properties.getProperty("web.baseUrl"));
+//    wd.get(properties.getProperty("web.baseUrl"));
     wd.get("http://192.168.0.26/addressbook/");
     navigationHelper = new NavigationHelper(wd);
     groupHelper = new GroupHelper(wd);
